@@ -1,0 +1,4 @@
+
+@echo off
+'C:\Users\selin\Desktop\uni\Modul 5\Aufgabe 2\Aufgabe2 _108500.py'
+pause
