@@ -4,7 +4,7 @@ def convert_height(metric):
     """Körpergröße in Meter oder Centimeter eingeben.
     Die Größe wird in Feet und Inch ausgegeben.
     Eingabe-Beispiel: 1.75 m oder 175 cm
-    Ist keine Einheit angegeben, wird von Centimeter ausgegangen.
+    Falls keine Einheit angegeben ist, wird von Centimeter ausgegangen.
     ---
     Parameter:
     metric = Eingegebene Körpergröße (cm, m)
