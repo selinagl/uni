@@ -1,15 +1,31 @@
-def sum_odd_numbers(list_numbers):
-    """Input a list consisting of numbers.
-    The odd numbers are summed."""
-    sum_odd = 0
-    for x in list_numbers:
-        if x % 2 != 0:
-            sum_odd += x
-    return sum_odd
+# Python-Version: Python 3.9
 
-liste = [1, 5, 8, 58, 85, 805, 510, 24, 4, 16]
+def test_odd_numbers(number):
+    """Testet eine Zahl, ob sie gerade oder ungerade ist.
+    ----
+    Parameter:
+    number = Integer
+    ----
+    returns:
+    odd = Boolean
+    True → Zahl ist ungerade
+    False → Zahl ist gerade"""
 
-print(sum_odd_numbers.__doc__)
-print(f"The sum of all odd numbers is {sum_odd_numbers(liste)}.")
+    if number % 2 == 0:
+        odd = False
+    else:
+        odd = True
+    return odd
 
 
+# Liste mit geraden und ungeraden Zahlen
+list_numbers = [1, 5, 8, 58, 85, 805, 510, 24, 4, 16]
+
+# Iteriert durch die Liste mit Zahlen und addiert zu sum_odd, falls die Zahl ungerade ist.
+sum_odd = 0
+for x in list_numbers:
+    if test_odd_numbers(x) is True:
+        sum_odd += x
+
+print(test_odd_numbers.__doc__)
+print(f"Die Summe aller ungeraden Zahlen ist {sum_odd}.")
