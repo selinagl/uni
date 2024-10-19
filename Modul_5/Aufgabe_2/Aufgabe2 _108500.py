@@ -8,7 +8,7 @@ import random
 def read_csv(path):
     """CSV-Datei lesen.
     Quiz-Fragen werden in einer verschachtelten Liste gespeichert.
-    Format: list_questions = [Frage, (Antwort 1, Antwort 2, ..., Antwort 4), korrekte Antwort]
+    Format: list_questions = [Frage, [Antwort 1, Antwort 2, ..., Antwort 4], korrekte Antwort]
     ----
     Parameter:
     path = Pfad zur csv-Datei
@@ -67,10 +67,10 @@ def capitals_quiz(list_questions):
             print("Falsch!")
             print(f"Die richtige Antwort lautet {element[1][int(element[2]) - 1]}.\n")
 
-    return print(f"Richte Antworten: {score}/{max_score}\nErgebnis: {score / max_score:.2f}\n")
+    return print(f"Richtige Antworten: {score}/{max_score}\nErgebnis: {score / max_score:.2f}\n")
 
 
-# Pfad für csv-Datei anlegen
+# Pfad zur csv-Datei anlegen
 path_folder = os.path.dirname(__file__)
 name_csv = "quiz_questions.csv"
 path_csv = os.path.join(path_folder, name_csv)
