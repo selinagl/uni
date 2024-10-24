@@ -18,7 +18,7 @@ def read_csv(path):
 
     list_questions = []
     with open(path) as csvfile:
-        csv_reader = csv.reader(csvfile, delimiter=';')
+        csv_reader = csv.reader(csvfile, delimiter=',')
         next(csv_reader)
         for row in csv_reader:
             question = row[0], row[1:5], row[5]
@@ -72,7 +72,7 @@ def capitals_quiz(list_questions):
 
 # Pfad zur csv-Datei anlegen
 path_folder = os.path.dirname(__file__)
-name_csv = "quiz_questions.csv"
+name_csv = "quiz_all_questions.csv"
 path_csv = os.path.join(path_folder, name_csv)
 
 # Schleife um das Quiz nochmal zu spielen
