@@ -18,7 +18,7 @@ def read_csv(path):
 
     list_questions = []
     with open(path) as csvfile:
-        csv_reader = csv.reader(csvfile, delimiter=';')
+        csv_reader = csv.reader(csvfile, delimiter=',')
         next(csv_reader)
         for row in csv_reader:
             question = row[0], row[1:5], row[5]
@@ -38,50 +38,54 @@ def capitals_quiz(list_questions):
     string: Ergebnis → richtige Antworten von allen Antworten
                      → richtige Antworten dividiert durch alle Antworten
     """
+    print("Welcome to the 'Capitals of Europe'-Quiz!")
+    # Variablen fürs Endergebnis erstellen
     score = 0
     max_score = len(list_questions)
+    # Damit die Fragen nicht immer in derselben Reihenfolge kommen
     random.shuffle(list_questions)
 
-    # Die Fragen werden dem Benutzer gestellt.
     for element in list_questions:
-        print(element[0])
+        # Frage wird gestellt
+        print(f"What is the capital of {element[0]}?")
+        # Antwortmöglichkeiten werden angezeigt
         for el in range(0, 4):
             print(f"[{el + 1}]: {element[1][el]}")
-    # Falls der Benutzer eine ungültige Eingabe macht, wird sie wiederholt.
+        # Falls der Benutzer eine ungültige Eingabe macht, wird die Frage wiederholt.
         user_input_1 = False
         while user_input_1 is False:
             try:
-                user_answer = int(input("Antwort? "))
+                user_answer = int(input("Answer? "))
                 if 1 <= user_answer <= 4:
                     user_input_1 = True
                 else:
-                    print("Nummer von 1 bis 4 eingeben.")
+                    print("Input a number from 1 to 4.")
             except ValueError:
-                print("Die Nummer neben der richtigen Antwort eingeben.")
-    # Feedback, ob die Frage richtig beantwortet wurde
-    # Falls die Frage falsch beantwortet wurde, wird die richtige Antwort ausgegeben.
+                print("Input the number next to the correct answer.")
+        # Feedback, ob die Frage richtig beantwortet wurde
+        # Falls die Frage falsch beantwortet wurde, wird die richtige Antwort ausgegeben.
         if int(element[2]) == user_answer:
-            print("Richtig!\n")
+            print("Correct!\n")
             score += 1
         else:
-            print("Falsch!")
-            print(f"Die richtige Antwort lautet {element[1][int(element[2]) - 1]}.\n")
+            print("Wrong!")
+            print(f"The correct answer was {element[1][int(element[2]) - 1]}.\n")
 
-    return print(f"Richtige Antworten: {score}/{max_score}\nErgebnis: {score / max_score:.2f}\n")
+    return print(f"Correct Answers: {score}/{max_score}\nScore: {score / max_score:.2f}\n")
 
 
 # Pfad zur csv-Datei anlegen
 path_folder = os.path.dirname(__file__)
-name_csv = "quiz_questions.csv"
+name_csv = "quiz_all_questions.csv"
 path_csv = os.path.join(path_folder, name_csv)
 
-# Schleife um das Quiz nochmal zu spielen
+# Schleife um nach Beendigung das Quiz nochmal zu starten
 play_quiz = True
 while play_quiz is True:
     capitals_quiz(read_csv(path_csv))
     # Wenn eine ungültige Eingabe gemacht wird, kann sie wiederholt werden.
     while True:
-        user_input_2 = input("Willst du nochmal spielen [j/n]\n")
+        user_input_2 = input("Do you want to try again? [y/n]\n")
         if user_input_2.lower() == "j":
             break
         elif user_input_2.lower() == "n":
@@ -89,4 +93,4 @@ while play_quiz is True:
             print("Quiz fertig.")
             break
         else:
-            print("Eingabe wiederholen. 'j' für Ja. 'n' für Nein.\n")
+            print("Repeat the input. 'y' for yes. 'n' for no.\n")
