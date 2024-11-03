@@ -38,7 +38,7 @@ def capitals_quiz(list_questions):
     string: Ergebnis → richtige Antworten von allen Antworten
                      → richtige Antworten dividiert durch alle Antworten
     """
-    print("Welcome to the 'Capitals of Europe'-Quiz!")
+    print("Welcome to the 'Capitals of Europe'-Quiz!\n")
     # Variablen fürs Endergebnis erstellen
     score = 0
     max_score = len(list_questions)
@@ -79,7 +79,7 @@ path_folder = os.path.dirname(__file__)
 name_csv = "quiz_all_questions.csv"
 path_csv = os.path.join(path_folder, name_csv)
 
-# Schleife um nach Beendigung das Quiz nochmal zu starten
+# Schleife um das Quiz nochmal zu starten
 play_quiz = True
 while play_quiz is True:
     capitals_quiz(read_csv(path_csv))
@@ -90,7 +90,7 @@ while play_quiz is True:
             break
         elif user_input_2.lower() == "n":
             play_quiz = False
-            print("Quiz fertig.")
+            print("Quiz done.")
             break
         else:
             print("Repeat the input. 'y' for yes. 'n' for no.\n")

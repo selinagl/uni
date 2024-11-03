@@ -1,3 +1,5 @@
+# Python-Version: Python 3.9
+
 import requests
 import os
 import csv
@@ -10,6 +12,7 @@ def get_country_capital():
     Rückgabewert:
     countries_dict = {Land: Hauptstadt}"""
 
+    # Url von API
     url = "https://restcountries.com/v3.1/region/europe"
     response = requests.get(url)
     # Testet, ob Website verfügbar ist, bevor sie aufgerufen wird
@@ -57,6 +60,7 @@ def write_quiz_csv(p_csv, quiz_dict):
             # Index der richtigen Antwort plus eins gespeichert
             right_answer = list_answers.index(val) + 1
             csv_writer.writerow([key, list_answers[0], list_answers[1], list_answers[2], list_answers[3], right_answer])
+
 
 # Pfad zur csv-Datei
 path_dir = os.path.dirname(__file__)
