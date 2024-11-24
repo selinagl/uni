@@ -10,7 +10,7 @@ polygon2 = shapely.from_wkt("POLYGON ((46.2 0, 43.3 4, 38.6 2.47, 38.6 -2.47, 43
 centroid1 = polygon1.centroid
 centroid2 = polygon2.centroid
 
-# Abstand zwischen Polygon-Schwerpunkten berechnet
+# Abstand zwischen Polygon-Schwerpunkten berechnen
 length_distance = centroid1.distance(centroid2)
 
 print(f"{length_distance:.2f}")
