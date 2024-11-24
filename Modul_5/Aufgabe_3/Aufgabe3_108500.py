@@ -10,8 +10,8 @@ def find_location(name):
     with open(CSV_FILE, "r", encoding="UTF-8") as file:
         reader = csv.DictReader(file, delimiter=",")
         for row in reader:
-            if name == row["Name"]:
-                return row["Lat"], row["Lon"]
+            if name == row.get("Name"):
+                return row.get("Lat"), row.get("Lon")
     return None
 
 location1 = find_location("Hotel Gasthaus Adler")
