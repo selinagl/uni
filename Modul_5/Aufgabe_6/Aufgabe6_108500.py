@@ -1,5 +1,6 @@
 from geonames_geocoder import GeoNamesGeocoder
 from nominatim_geocoder import NominatimGeocoder
+# ggf. weiteren Geocoding Service importieren
 
 # Dictionary zur Abfrage des Geocoding Service. Kann für weitere Services erweitert werden.
 dict_geocoder = {1: "Geonames", 2: "Nominatim"}
