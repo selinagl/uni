@@ -1,8 +1,14 @@
-"""ich brauche ein python skript, dass die orthodrome zwischen einem bestimmten ort (Hohenfestung Salzburg) und einem beliebigen ort berechnet. der beliebige ort wird vom benutzer abgefragt, der längen und breitengrad angeben soll. 
-die abfrage soll überpüft werden (benutzer darf nur eine floating point number eingeben, breitengrad soll zwischen -90 und 90 sein, längengrad zwischen -180 und 180)."""
+# Python-Version: 3.9
+
+""" Dieses Skript wurde von ChatGPT generiert.
+    Prompt:
+    ich brauche ein python skript, das die orthodrome zwischen einem bestimmten ort (Hohenfestung Salzburg)
+    und einem beliebigen ort berechnet. der beliebige ort wird vom benutzer abgefragt,
+    der längen und breitengrad angeben soll. die abfrage soll überpüft werden
+    (benutzer darf nur eine floating point number eingeben, breitengrad soll zwischen -90 und 90 sein,
+    längengrad zwischen -180 und 180)."""
 
 import math
-
 
 def is_valid_latitude(lat):
     return -90 <= lat <= 90

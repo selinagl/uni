@@ -1,22 +1,6 @@
-"""
-
-
-benötigte Module: math
-Abfrage der Koordinaten inkl. Prüfroutine (korrekter Datentyp, Koordinaten innerhalb eines Bereich) --> while, try except
-Variablen: lat_user, lon_user (Variablen für Longitude und Latitude des Benutzers
-Hardcoded Koordinaten für Festung Hohensalzburg
-Variablen: lat_slz, lon_slz
-Funktion: Umwandlung in rad, Berechnen der Orthodrome
-Variablen: distanz
-print() Ergebnis mit f String
-
-"""
+# Python-Version: 3.9
 
 import math
-
-#Koordinaten: Festung Hohensalzburg [°]
-lat_slz = 47.80
-lon_slz = 13.05
 
 #Koordinaten des Benutzers
 user_eingabe = False
