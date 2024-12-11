@@ -28,6 +28,7 @@ def fcname_validator(prefix, custom_buffer):
     get_date = datetime.now().strftime("%Y%d%m")
     name_test = f"{prefix}_{get_date}_{custom_buffer}Meter"
     validated_name = arcpy.ValidateTableName(name_test)
+    print("")
     print(f"Created name: {validated_name}")
     if arcpy.Exists(validated_name):
         out_fcname = arcpy.CreateUniqueName(validated_name)
