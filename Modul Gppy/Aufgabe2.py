@@ -66,6 +66,7 @@ print("")
 
 # User-Input: buffer distances
 list_buffer = []
+print("You can enter your buffer distances in sequence. Enter 'quit' if you have entered all your buffers.")
 while True:
     user_buffer = input("Enter the buffer distance: ")
     try:
@@ -75,7 +76,7 @@ while True:
         if user_buffer == "quit":
             break
         else:
-            print("Error. Enter only integers.")
+            print("Error. Enter only integers or 'quit'.")
 
 # Run
 for buffer in list_buffer:
