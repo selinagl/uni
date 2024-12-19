@@ -8,7 +8,7 @@
 import arcpy
 import os
 
-# Path to data in gdb
+# Path to gdb
 path_dir = os.path.dirname(__file__)
 path_gdb = os.path.join(path_dir, "Salzburg.gdb")
 
