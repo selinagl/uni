@@ -30,5 +30,3 @@ while user_input == False:
 
 #Ergebnis ausgeben. Für Codierung von Kubikmetern wird Unicode verwendet.
 print(f"Das Volumen des Zylinders beträgt {calc_volumen(user_r, user_h):.3f} m\u00b3.")
-
-

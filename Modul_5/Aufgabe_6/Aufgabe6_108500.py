@@ -1,3 +1,5 @@
+# Python-Version: Python 3.9
+
 from geonames_geocoder import GeoNamesGeocoder
 from nominatim_geocoder import NominatimGeocoder
 # ggf. weiteren Geocoding Service importieren

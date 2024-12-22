@@ -8,6 +8,7 @@
     (benutzer darf nur eine floating point number eingeben, breitengrad soll zwischen -90 und 90 sein,
     längengrad zwischen -180 und 180)."""
 
+
 import math
 
 def is_valid_latitude(lat):

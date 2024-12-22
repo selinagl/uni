@@ -1,4 +1,5 @@
 """Calculates a new attribute value with existing ones.
+
    author: Selina Glatzer
    date: 2024 Dec 19
 """
@@ -53,7 +54,7 @@ verktypneu()
 
 """
 -------------------------------------
-Original function in Calculate Field:
+Function as used in Calculate Field:
 --------------------------------------
 Verktypneu(!Typ1!, !Typ2!, !Typ3!, !Shape_Length!)
 

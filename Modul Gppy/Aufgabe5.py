@@ -1,6 +1,8 @@
 """Move the X- and Y-Coordinates of all features in a dataset. Output number of features outside of Salzburg.
    Read height of lowest point.
 
+   This script is operating the Script-Tool 'Aufgabe 5 - Geometrien modifizieren' in the ArcGIS-Toolbox 'UNIGIS'.
+
    author: Selina Glatzer
    date: 2024 Dec 17
 """
