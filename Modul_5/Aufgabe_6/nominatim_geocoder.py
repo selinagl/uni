@@ -1,5 +1,5 @@
 import geopy
-from geocoding_service import GeocodingService
+from Modul_5.Aufgabe_6.geocoding_service import GeocodingService
 
 class NominatimGeocoder(GeocodingService):
     """Implements a geocoding service based on the Nominatim API (accessed via GeoPy)."""

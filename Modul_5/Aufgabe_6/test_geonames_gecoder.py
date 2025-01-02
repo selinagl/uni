@@ -1,5 +1,5 @@
 import unittest
-from geonames_geocoder import GeoNamesGeocoder
+from Modul_5.Aufgabe_6.geonames_geocoder import GeoNamesGeocoder
 
 
 class TestGeonamesGeocoder(unittest.TestCase):

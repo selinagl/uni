@@ -1,7 +1,7 @@
 # Python-Version: Python 3.9
 
-from geonames_geocoder import GeoNamesGeocoder
-from nominatim_geocoder import NominatimGeocoder
+from Modul_5.Aufgabe_6.geonames_geocoder import GeoNamesGeocoder
+from Modul_5.Aufgabe_6.nominatim_geocoder import NominatimGeocoder
 # ggf. weiteren Geocoding Service importieren
 
 # Dictionary zur Abfrage des Geocoding Service. Kann für weitere Services erweitert werden.
